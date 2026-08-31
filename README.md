@@ -18,7 +18,7 @@ documentation — streamed in real time, with page-level citations.
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Grounded answers** — the LLM answers *only* from retrieved manual pages and refuses to invent specifications
 - **Page-level citations** — every answer links back to the exact PDF pages it was built from
@@ -27,7 +27,7 @@ documentation — streamed in real time, with page-level citations.
 - **Two-stage retrieval** — fast vector search over 384-dim embeddings, then cross-encoder reranking for precision
 - **One-command deployment** — Docker Compose with health-checked startup ordering
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
                         ┌─────────────────────────────────────┐
@@ -53,7 +53,7 @@ independently — fast but coarse. The cross-encoder reads the question and
 each candidate *together*, so re-ranking just the top candidates gives
 much better ordering at a fraction of the cost of re-scoring everything.
 
-## 🚀 Getting started
+##  Getting started
 
 ### Prerequisites
 
@@ -105,7 +105,7 @@ npm run dev
 ```
 </details>
 
-## 🔌 API
+##  API
 
 The single chat endpoint streams `text/event-stream` frames:
 
@@ -131,7 +131,7 @@ data: {}
 | `/api/chat` | POST | Grounded answer, streamed as SSE |
 | `/health` | GET | Liveness probe (powers the online dot in the UI) |
 
-## 📁 Project structure
+##  Project structure
 
 ```
 ├── backend/
@@ -152,7 +152,7 @@ data: {}
 └── compose.yaml
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 All knobs live in `backend/app/config.py` / `backend/.env`:
 
@@ -165,7 +165,7 @@ All knobs live in `backend/app/config.py` / `backend/.env`:
 | `llm_model` | minimax/minimax-m3:free | Any OpenRouter chat model |
 | `rerank_model` | ms-marco-MiniLM-L-6-v2 | Cross-encoder reranker |
 
-## 🧰 Troubleshooting
+##  Troubleshooting
 
 | Symptom | Fix |
 |---|---|
@@ -174,8 +174,3 @@ All knobs live in `backend/app/config.py` / `backend/.env`:
 | Wrong/no citations | Re-run ingestion for the affected pages; check vectors with `docker compose exec backend python -c "..."` |
 | Port already in use | Stop whatever holds :3000/:8000 (`ss -tlnp \| grep 3000`) |
 
----
-
-Built as a hands-on study project — the codebase is commented to be read
-top-to-bottom. Start at [README.md](README.md) reading orders in
-`backend/app/` and follow the pipeline stage by stage.
