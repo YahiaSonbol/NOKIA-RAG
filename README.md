@@ -11,8 +11,8 @@ documentation — streamed in real time, with page-level citations.
 [![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-764ABC?logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
 [![Pinecone](https://img.shields.io/badge/Pinecone-vector%20DB-1C1E54)](https://www.pinecone.io/)
 
-<img src="docs/screenshot_welcome.png" alt="Welcome screen" width="49%" />
-<img src="docs/screenshot_chat.png" alt="Chat with grounded answer and citations" width="49%" />
+<img src="docs/screenshot_welcome.jpeg" alt="Welcome screen" width="49%" />
+<img src="docs/screenshot_chat.jpeg" alt="Chat with grounded answer and citations" width="49%" />
 
 </div>
 
