@@ -1,0 +1,27 @@
+# --- Python / backend ---
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# --- Secrets ---
+.env
+backend/.env
+
+# --- Model & data artifacts (large / derived) ---
+.hf_cache/
+backend/.hf_cache/
+backend/data/processed/
+backend/data/documents/
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# --- Misc ---
+.DS_Store
+*.log
+test-results/
+playwright-report/

@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+
+opendataloader-pdf
+
+pinecone
+
+sentence-transformers
+torch
+
+openai
+
+python-dotenv
+pydantic
