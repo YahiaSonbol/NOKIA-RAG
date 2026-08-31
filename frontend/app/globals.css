@@ -1,0 +1,292 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(0.985 0.012 222);
+  --foreground: oklch(0.18 0.045 248);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.045 248);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.045 248);
+  --primary: oklch(0.52 0.24 257);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.035 218);
+  --secondary-foreground: oklch(0.22 0.07 250);
+  --muted: oklch(0.95 0.02 226);
+  --muted-foreground: oklch(0.46 0.04 239);
+  --accent: oklch(0.93 0.035 250);
+  --accent-foreground: oklch(0.3 0.09 255);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.88 0.025 226);
+  --input: oklch(0.88 0.025 226);
+  --ring: oklch(0.62 0.21 257);
+  --chart-1: oklch(0.52 0.24 257);
+  --chart-2: oklch(0.78 0.18 179);
+  --chart-3: oklch(0.72 0.22 143);
+  --chart-4: oklch(0.63 0.2 232);
+  --chart-5: oklch(0.28 0.1 252);
+  --radius: 0.875rem;
+  --sidebar: oklch(0.97 0.018 222);
+  --sidebar-foreground: oklch(0.18 0.045 248);
+  --sidebar-primary: oklch(0.52 0.24 257);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.94 0.035 218);
+  --sidebar-accent-foreground: oklch(0.22 0.07 250);
+  --sidebar-border: oklch(0.88 0.025 226);
+  --sidebar-ring: oklch(0.62 0.21 257);
+}
+
+.dark {
+  --background: oklch(0.16 0.02 252);
+  --foreground: oklch(0.98 0.005 250);
+  --card: oklch(0.21 0.025 252);
+  --card-foreground: oklch(0.98 0.005 250);
+  --popover: oklch(0.21 0.025 252);
+  --popover-foreground: oklch(0.98 0.005 250);
+  --primary: oklch(0.62 0.21 257);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.28 0.045 250);
+  --secondary-foreground: oklch(0.97 0.01 250);
+  --muted: oklch(0.27 0.03 250);
+  --muted-foreground: oklch(0.72 0.03 250);
+  --accent: oklch(0.3 0.05 240);
+  --accent-foreground: oklch(0.98 0.005 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.62 0.21 257);
+  --chart-1: oklch(0.62 0.21 257);
+  --chart-2: oklch(0.78 0.18 179);
+  --chart-3: oklch(0.72 0.22 143);
+  --chart-4: oklch(0.63 0.2 232);
+  --chart-5: oklch(0.28 0.1 252);
+  --sidebar: oklch(0.19 0.025 252);
+  --sidebar-foreground: oklch(0.98 0.005 250);
+  --sidebar-primary: oklch(0.62 0.21 257);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.28 0.045 250);
+  --sidebar-accent-foreground: oklch(0.97 0.01 250);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.62 0.21 257);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* ---- Welcome orb: slow color wave + breathing ---- */
+
+@keyframes orb-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.orb-colors {
+  background: conic-gradient(
+    from 0deg,
+    color-mix(in oklab, var(--primary) 85%, white),
+    color-mix(in oklab, var(--chart-2) 75%, white),
+    color-mix(in oklab, var(--chart-4) 75%, white),
+    color-mix(in oklab, var(--chart-5) 70%, var(--primary)),
+    color-mix(in oklab, var(--primary) 85%, white)
+  );
+  filter: blur(14px);
+  animation: orb-spin 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes orb-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+.orb-breathe {
+  animation: orb-breathe 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes orb-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+}
+
+.orb-glow {
+  animation: orb-glow-pulse 5.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* ---- Bottom ambient wave: two layers drifting at different speeds ---- */
+
+.bottom-ellipse-glow {
+  left: -12%;
+  width: 124%;
+  height: 22rem;
+}
+
+.bottom-ellipse-wave {
+  position: absolute;
+  inset: 0;
+  will-change: transform, opacity;
+}
+
+.bottom-ellipse-wave-a {
+  background: radial-gradient(
+    58% 86% at 30% 100%,
+    color-mix(in oklab, var(--primary) 16%, transparent),
+    transparent 72%
+  );
+  animation: ellipse-wave-a 16s ease-in-out infinite;
+}
+
+.bottom-ellipse-wave-b {
+  background: radial-gradient(
+    52% 82% at 72% 100%,
+    color-mix(in oklab, var(--chart-2) 14%, transparent),
+    transparent 72%
+  );
+  animation: ellipse-wave-b 23s ease-in-out infinite;
+}
+
+@keyframes ellipse-wave-a {
+  0%,
+  100% {
+    transform: translate3d(-4%, 6%, 0) scale(1.04, 1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(4%, -3%, 0) scale(1.16, 1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes ellipse-wave-b {
+  0%,
+  100% {
+    transform: translate3d(3%, 4%, 0) scale(1.12, 1.05);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate3d(-3%, -4%, 0) scale(1.02, 1);
+    opacity: 0.95;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * AI response typography (.ai-prose)
+ *
+ * The @tailwindcss/typography plugin drives every markdown element's color
+ * from --tw-prose-* variables. Overriding the variables here (instead of
+ * sprinkling one-off classes) guarantees consistent, readable colors for
+ * paragraphs, headings, bold, lists, links, code, quotes and tables.
+ * Light-ink values for the dark theme live under `.dark`.
+ * ------------------------------------------------------------------------- */
+.ai-prose {
+  /* light theme: dark ink on a light card */
+  --tw-prose-body: oklch(0.32 0.02 255);
+  --tw-prose-headings: oklch(0.2 0.02 255);
+  --tw-prose-bold: oklch(0.18 0.02 255);
+  --tw-prose-links: oklch(0.55 0.19 257);
+  --tw-prose-quotes: oklch(0.4 0.02 255);
+  --tw-prose-quote-borders: oklch(0.62 0.21 257);
+  --tw-prose-counters: oklch(0.55 0.03 250);
+  --tw-prose-bullets: oklch(0.62 0.21 257);
+  --tw-prose-hr: oklch(0.2 0.02 255 / 12%);
+  --tw-prose-captions: oklch(0.5 0.03 250);
+  --tw-prose-code: oklch(0.3 0.02 255);
+  --tw-prose-th-borders: oklch(0.2 0.02 255 / 18%);
+  --tw-prose-td-borders: oklch(0.2 0.02 255 / 10%);
+}
+
+.dark .ai-prose {
+  /* dark theme: bright off-white body, near-white bold, pure white headings */
+  --tw-prose-body: oklch(0.93 0.008 250);
+  --tw-prose-headings: oklch(1 0 0);
+  --tw-prose-bold: oklch(1 0 0);
+  --tw-prose-links: oklch(0.78 0.13 255);
+  --tw-prose-quotes: oklch(0.93 0.008 250);
+  --tw-prose-quote-borders: oklch(0.62 0.21 257);
+  --tw-prose-counters: oklch(0.75 0.03 250);
+  --tw-prose-bullets: oklch(0.62 0.21 257);
+  --tw-prose-hr: oklch(1 0 0 / 12%);
+  --tw-prose-captions: oklch(0.75 0.03 250);
+  --tw-prose-code: oklch(0.97 0.005 250);
+  --tw-prose-th-borders: oklch(1 0 0 / 18%);
+  --tw-prose-td-borders: oklch(1 0 0 / 10%);
+}
+
+/* headings get real weight, tighter leading and a touch more air */
+.ai-prose h1,
+.ai-prose h2,
+.ai-prose h3,
+.ai-prose h4 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
